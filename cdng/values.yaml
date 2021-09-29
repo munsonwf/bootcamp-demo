@@ -1,6 +1,6 @@
 name: nandeesh
 replicas: 1
-image: <+artifact.image>
+image: ${artifact.metadata.image}
 
 
 createNamespace: true
