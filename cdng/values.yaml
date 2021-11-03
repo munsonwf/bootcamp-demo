@@ -1,10 +1,10 @@
-name: pm
+name: nandeesh
 replicas: 1
-image: <+artifact.image>
+image: ${artifact.metadata.image}
 
 
 createNamespace: true
-namespace: <+infra.namespace>
+namespace: harness-default
 
 # Service Type allow you to specify what kind of service you want.
 # Possible values for ServiceType are:
@@ -18,6 +18,6 @@ serviceTargetPort: 80
 
 env:
   config:
-    key1: harnessDemo
+    key1: value1
   secrets:
-    key2: sandbox
+    key2: value2
